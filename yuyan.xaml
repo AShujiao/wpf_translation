@@ -1,0 +1,154 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="ManaTranslation.yuyan"
+        Title="yuyan" Height="100" Width="320" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" MouseDoubleClick="btn_Close">
+    <Grid>
+        <RadioButton x:Name="rad1" Click="rad1_click" Content="RadioButton" HorizontalAlignment="Left" Margin="39.318,47.727,0,0" VerticalAlignment="Top" Template="{DynamicResource RadioButtonControlTemplate1}">
+            <RadioButton.Resources>
+                <ControlTemplate x:Key="RadioButtonControlTemplate1" TargetType="{x:Type RadioButton}">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualState x:Name="Checked">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames  Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="check">
+                                            <EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked"/>
+                                <VisualState x:Name="Indeterminate"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Ellipse x:Name="uncheck" HorizontalAlignment="Left" Height="69" Margin="-33.818,-31.227,-34.182,-36.773" VerticalAlignment="Top" Width="69"  StrokeThickness="0" Stroke="Black">
+                            <Ellipse.Effect>
+                                <DropShadowEffect ShadowDepth="1" Opacity="0.75"/>
+                            </Ellipse.Effect>
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="image/1.jpg" Stretch="UniformToFill"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Rectangle  Fill="Black" HorizontalAlignment="Left" Height="11.999" Margin="-20.004,18.779,-0.666,-24.595" VerticalAlignment="Top" Width="41.386" Opacity="0.8"/>
+                        <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="自动" VerticalAlignment="Top" Margin="-10.283,18.779,9.665,-24.863" FontSize="10.667" Foreground="White" FontFamily="Arial Black" Opacity="1"/>
+                        <Ellipse x:Name="check" HorizontalAlignment="Left" Height="69" Margin="-33.818,-31.227,-14.466,-31.59" VerticalAlignment="Top" Width="69" StrokeThickness="0" Stroke="Black" Fill="Lime" Opacity="0">
+                            <Ellipse.Effect>
+                                <DropShadowEffect ShadowDepth="1" Opacity="0.75"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </RadioButton.Resources>
+        </RadioButton>
+        <RadioButton x:Name="rad2" Click="rad2_click" Content="RadioButton" HorizontalAlignment="Left" Margin="119.318,47.727,0,0" VerticalAlignment="Top" Template="{DynamicResource RadioButtonControlTemplate1}">
+            <RadioButton.Resources>
+                <ControlTemplate x:Key="RadioButtonControlTemplate1" TargetType="{x:Type RadioButton}">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualState x:Name="Checked">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="check">
+                                            <EasingDoubleKeyFrame KeyTime="0" Value="0.2"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked"/>
+                                <VisualState x:Name="Indeterminate"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Ellipse x:Name="uncheck" HorizontalAlignment="Left" Height="69" Margin="-33.818,-31.227,-34.182,-36.773" VerticalAlignment="Top" Width="69" StrokeThickness="0" Stroke="Black">
+                            <Ellipse.Effect>
+                                <DropShadowEffect ShadowDepth="1" Opacity="0.75"/>
+                            </Ellipse.Effect>
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="image/3.jpg" Stretch="UniformToFill"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Rectangle  Fill="Black" HorizontalAlignment="Left" Height="11.999" Margin="-20.004,18.779,-0.666,-24.595" VerticalAlignment="Top" Width="41.386" Opacity="0.8"/>
+                        <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="中-日" VerticalAlignment="Top" Margin="-10.283,18.779,9.665,-24.863" FontSize="10.667" Foreground="White" FontFamily="Arial Black" Opacity="1"/>
+                        <Ellipse x:Name="check" HorizontalAlignment="Left" Height="69" Margin="-33.818,-31.227,-14.466,-31.59" VerticalAlignment="Top" Width="69" StrokeThickness="0" Stroke="Black" Fill="Lime" Opacity="0">
+                            <Ellipse.Effect>
+                                <DropShadowEffect ShadowDepth="1" Opacity="0.75"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </RadioButton.Resources>
+        </RadioButton>
+        <RadioButton x:Name="rad3" Click="rad3_click" Content="RadioButton" HorizontalAlignment="Left" Margin="201.318,47.727,0,0" VerticalAlignment="Top" Template="{DynamicResource RadioButtonControlTemplate1}">
+            <RadioButton.Resources>
+                <ControlTemplate x:Key="RadioButtonControlTemplate1" TargetType="{x:Type RadioButton}">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualState x:Name="Checked">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="check">
+                                            <EasingDoubleKeyFrame KeyTime="0" Value="0.2"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked"/>
+                                <VisualState x:Name="Indeterminate"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Ellipse x:Name="uncheck" HorizontalAlignment="Left" Height="69" Margin="-33.818,-31.227,-34.182,-36.773" VerticalAlignment="Top" Width="69" StrokeThickness="0" Stroke="Black">
+                            <Ellipse.Effect>
+                                <DropShadowEffect ShadowDepth="1" Opacity="0.75"/>
+                            </Ellipse.Effect>
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="image/40.jpg" Stretch="UniformToFill"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Rectangle  Fill="Black" HorizontalAlignment="Left" Height="11.999" Margin="-20.004,18.779,-0.666,-24.595" VerticalAlignment="Top" Width="41.386" Opacity="0.8"/>
+                        <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="中-韩" VerticalAlignment="Top" Margin="-10.283,18.779,9.665,-24.863" FontSize="10.667" Foreground="White" FontFamily="Arial Black" Opacity="1"/>
+                        <Ellipse x:Name="check" HorizontalAlignment="Left" Height="69" Margin="-33.818,-31.227,-14.466,-31.59" VerticalAlignment="Top" Width="69" StrokeThickness="0" Stroke="Black" Fill="Lime" Opacity="0">
+                            <Ellipse.Effect>
+                                <DropShadowEffect ShadowDepth="1" Opacity="0.75"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </RadioButton.Resources>
+        </RadioButton>
+        <RadioButton x:Name="rad4" Click="rad4_click" Content="RadioButton" HorizontalAlignment="Left" Margin="281.318,47.727,0,0" VerticalAlignment="Top" Template="{DynamicResource RadioButtonControlTemplate1}">
+            <RadioButton.Resources>
+                <ControlTemplate x:Key="RadioButtonControlTemplate1" TargetType="{x:Type RadioButton}">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualState x:Name="Checked">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="check">
+                                            <EasingDoubleKeyFrame KeyTime="0" Value="0.2"/>
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked"/>
+                                <VisualState x:Name="Indeterminate"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Ellipse x:Name="uncheck" HorizontalAlignment="Left" Height="69" Margin="-33.818,-31.227,-34.182,-36.773" VerticalAlignment="Top" Width="69" StrokeThickness="0" Stroke="Black">
+                            <Ellipse.Effect>
+                                <DropShadowEffect ShadowDepth="1" Opacity="0.75"/>
+                            </Ellipse.Effect>
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="image/5.jpg" Stretch="UniformToFill"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <Rectangle  Fill="Black" HorizontalAlignment="Left" Height="11.999" Margin="-20.004,18.779,-0.666,-24.595" VerticalAlignment="Top" Width="41.386" Opacity="0.8"/>
+                        <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="中-西班牙" VerticalAlignment="Top" Margin="-22.004,18.779,8.665,-24.863" FontSize="10.667" Foreground="White" FontFamily="Arial Black" Opacity="1" Width="48.274"/>
+                        <Ellipse x:Name="check" HorizontalAlignment="Left" Height="69" Margin="-33.818,-31.227,-14.466,-31.59" VerticalAlignment="Top" Width="69" StrokeThickness="0" Stroke="Black" Fill="Lime" Opacity="0">
+                            <Ellipse.Effect>
+                                <DropShadowEffect ShadowDepth="1" Opacity="0.75"/>
+                            </Ellipse.Effect>
+                        </Ellipse>
+                    </Grid>
+                </ControlTemplate>
+            </RadioButton.Resources>
+        </RadioButton>
+
+    </Grid>
+</Window>
+

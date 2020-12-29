@@ -1,0 +1,35 @@
+﻿<Application x:Class="ManaTranslation.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="for_noresize_window" TargetType="{x:Type Window}">
+            <Setter Property="AllowsTransparency" Value="true"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="ResizeMode" Value="NoResize"/>
+            <Setter Property="WindowStyle" Value="None"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Window}">
+                        <Grid Margin="10">
+                            <Rectangle Fill="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"  
+                               RadiusX="5" RadiusY="5">
+                                <Rectangle.Effect>
+                                    <DropShadowEffect BlurRadius="10" ShadowDepth="0"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                            <Border Background="{TemplateBinding Background}"  
+                            BorderBrush="{TemplateBinding BorderBrush}"  
+                            BorderThickness="{TemplateBinding BorderThickness}"  
+                            Padding="{TemplateBinding Margin}"  
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"  
+                            CornerRadius="5">
+                                <ContentPresenter />
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>
